@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Bài tập js nâng cao</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+        <h3 style="text-align: center; background-color: aqua;">Nhập điểm chuẩn hội đồng , điểm 3 môn thi của thí sinh , khu vực , đối tượng dự thi . Cho biết thí sinh đậu hay rớt và tổng số điểm đạt được</h3>
+        <div class="row">
+            <div class="form-group  col">
+                <label for=""></label>
+                <input type="text" name="" id="benchMark" class="form-control" placeholder="Điểm chuẩn "  >
+            </div>
+            <div class="form-group col" >
+                <select name="" id="area" style="width: 350px; height: 35px; margin-top: 25px;">
+                    <option value="">Chọn khu vực</option>
+                    <option value="2">A</option>
+                    <option value="1">B</option>
+                    <option value="0.5">C</option>
+                    <option value="x">Khu vực không ưu tiên</option>
+
+                </select>
+            </div>
+            <div class="form-group col">
+                
+                <select name="" id="object" style="width: 350px; height: 35px; margin-top: 25px;">
+                    <option value="">Chọn đối tượng</option>
+                    <option value="2.5">1</option>
+                    <option value="1.5">2</option>
+                    <option value="1">3</option>
+                    <option value="0">Đối tượng không ưu tiên</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group  col">
+                <label for=""></label>
+                <input type="text" name="" id="subject1" class="form-control" placeholder="Điểm môn thứ 1" >
+              </div>
+              <div class="form-group col">
+                  <label for=""></label>
+                  <input type="text" name="" id="subject2" class="form-control" placeholder="Điểm môn thứ 2" >
+                </div>
+                <div class="form-group col">
+                  <label for=""></label>
+                  <input type="text" name="" id="subject3" class="form-control" placeholder="Điểm môn thứ 3" >
+                </div>
+        </div>
+        <button style="margin-left: 500px;" class="btn btn-success" onclick="resultbtn()">Kết quả</button>
+        <div id="result" style="background-color: aqua; height: 50px; margin-top: 20px;"></div>
+    </div>
+    <br><br><br>
+    <div class="container">
+        <h3>tính tiền điện</h3>
+        <div class="form-group">
+          <label for=""></label>
+          <input type="text" name="" id="name" class="form-control" placeholder="Nhập họ tên" >
+        </div>
+        <div class="form-group">
+            <label for=""></label>
+            <input type="number" name="" id="number" class="form-control" placeholder="Nhập số kw" >
+          </div>
+          <button style="margin-left: 500px;" class="btn btn-success" onclick="btnKw()">Tính tiền điện</button>
+          <div id="pay" style="background-color: aqua; height: 50px; margin-top: 20px;"></div>
+    </div>
+    <br><br><br>
+    <div class="container">
+        <h3>tính thuế thu nhập cá nhân</h3>
+        <div class="form-group">
+          <label for=""></label>
+          <input type="text" name="" id="name1" class="form-control" placeholder="Nhập họ tên" >
+        </div>
+        <div class="form-group">
+            <label for=""></label>
+            <input type="number" name="" id="salary" class="form-control" placeholder="Tổng thu nhập năm" >
+        </div>
+        <div class="form-group">
+            <label for=""></label>
+            <input type="number" name="" id="person" class="form-control" placeholder="Số người phụ thuộc" >
+        </div>
+        <button style="margin-left: 500px;" class="btn btn-success" onclick="btnThue()">Tính tiền Thuế</button>
+        <div id="Thue" style="background-color: aqua; height: 50px; margin-top: 20px;"></div>
+    </div>
+    <br><br><br>
+    <div class="container">
+        <h3>tính hóa đơn khách hàng cho cty cáp </h3>
+        <div class="row">
+            <div class="form-group col">
+                <select name="" id="clientType" style="width: 350px; height: 35px; margin-top: 25px;" onchange="showHide()">
+                    <option selected disabled >Chọn loại khách hàng</option>
+                    <option value="0">Nhà dân</option>
+                    <option value="1">Doanh nghiệp </option>
+                  
+                </select>
+            </div>
+            <div class="form-group " id="connect" style="display: none;">
+                <label for=""></label>
+                <input type="number" name="" id="numberConnect" class="form-control" placeholder="Số kết nối " >
+            </div>
+            <div class="form-group col">
+                <label for=""></label>
+                <input type="text" name="" id="clientCode" class="form-control" placeholder="Nhập mã khách hàng" >
+            </div>
+            <div class="form-group col">
+                <label for=""></label>
+                <input type="number" name="" id="vipChannel" class="form-control" placeholder="Số kênh cao cấp" >
+            </div>
+            
+        </div>
+        <button style="margin-left: 500px;" class="btn btn-success" onclick="btnHoaDon()">Tính tiền cáp</button>
+        <div id="cap" style="background-color: aqua; height: 50px; margin-top: 20px;"></div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
